@@ -38,7 +38,7 @@ void main()
     SPBRG=129;
     TRISB=0x08;
     TRISC=0x80;
-    LATB3=0;
+    //LATB3=0;
     
     CANCONbits.REQOP2=1;             //Configuration mode
     while(CANSTATbits.OPMODE2==0);
@@ -51,7 +51,7 @@ void main()
     BRGCON2=0xa4;
     BRGCON3=0x04;
 
-    LATB3=0;
+    //LATB3=0;
 
     ENDRHI=1;
     CANCONbits.REQOP2=0;                //Normal mode
