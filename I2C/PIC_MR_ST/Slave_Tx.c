@@ -1,0 +1,34 @@
+//PIC18F4580
+
+#include <xc.h>
+#define _XTAL_FREQ 20000000
+void data(const char d);
+void string(const char *s);
+int i;
+void main(void) {
+    SSPADD = 0Xd0;
+    SSPSTAT = 0X80;
+    SSPCON1 = 0X36;
+    SSPCON2 = 0x01;
+    TRISC = 0xff;
+    while(1){
+      
+        if(CKP==0){
+            if(SSPSTAT & 0X04){
+                char dummy = SSPBUF;
+                SSPBUF = 48 + i++;
+                while(!BF);
+                
+                
+                CKP =1;
+                SSPIF = 0;
+                
+                
+                
+                __delay_ms(1000);
+            }
+        }
+    }
+
+    return;
+}
