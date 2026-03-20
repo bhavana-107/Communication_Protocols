@@ -64,7 +64,7 @@ void main()
         txd(' ');
         cantx(RCREG);
         
-        delay(100);
+        //delay(100);
         RCIF=0;    
     }
 }
