@@ -1,4 +1,4 @@
-//CAN Communication using PIC MCU used
+//CAN Communication using PIC MCU 
 
 
 #include<xc.h>
